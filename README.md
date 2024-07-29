@@ -9,6 +9,7 @@ This repository holds the Docker Compose for the team's BookStack Wiki. This wik
     DB_USER=bookstack
     DB_PASS=<yourdbpass>
     APP_URL=https://bookstack.example.com
+    PORT=6875
     ```
 
 2. Modify the `.env` file to your use case. 
