@@ -3,7 +3,7 @@ This repository holds the Docker Compose for the team's BookStack Wiki. This wik
 
 # Setup
 
-1.  Create a file called `.evn` in your project directory and paste the following code in:
+1.  Create a file called `.env` in your project directory and paste the following code in:
 
     ``` 
     DB_USER=bookstack
@@ -11,7 +11,7 @@ This repository holds the Docker Compose for the team's BookStack Wiki. This wik
     APP_URL=https://bookstack.example.com
     ```
 
-2. Modify the `.evn` file to your use case. 
+2. Modify the `.env` file to your use case. 
 
 > [!CAUTION]
 > Use secure passwords!! These services can be accessed on the open internet. Be Smart
