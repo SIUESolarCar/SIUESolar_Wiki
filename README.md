@@ -2,22 +2,21 @@
 This repository holds the Docker Compose for the team's BookStack Wiki. This wiki is inteded to hold all internal documentation for the team to pass down knowledge.
 
 # Setup
-Only a few lines of the compose.yaml need to be modified inorder to use the wiki. 
 
-1. The Database Password
-     
+1.  Create a file called `.evn` in your project directory and paste the following code in:
+
     ``` 
-    - DB_PASS=<yourdbpass>
-    - MYSQL_ROOT_PASSWORD=<yourdbpass>
-    - MYSQL_PASSWORD=<yourdbpass>
+    DB_USER=bookstack
+    DB_PASS=<yourdbpass>
+    APP_URL=https://bookstack.example.com
     ```
-2. The URL
+
+2. Modify the `.evn` file to your use case. 
+
+> [!CAUTION]
+> Use secure passwords!! These services can be accessed on the open internet. Be Smart
+
+3. Run the Docker Compose in the terminal.
 
     ```
-    - APP_URL=https://bookstack.example.com
-    ```
-3. Path to Volumes
-    ```
-    - /path/to/bookstack_app_data:/config
-    - /path/to/bookstack_db_data:/config
-    ```
+    $ docker compose up
