@@ -5,11 +5,15 @@ This repository contains the Compose configuration for deploying the BookStack W
 
 1.  Create and Modify a `.env` with contents:
 
-    ``` 
-    DB_USER=bookstack
-    DB_PASS=<yourdbpass>
+    ```bash
+    DB_PASS=secret
+    # Set the APP_URL to the URL of bookstack without without a trailing slash APP_URL=https://example.com
     APP_URL=https://bookstack.example.com
     PORT=6875
+    # APP_KEY is used for encryption where needed, so needs to be persisted to
+    # preserve decryption abilities.
+    # Can run `php artisan key:generate` to generate a key
+    APP_KEY=SomeRandomStringWith32Characters
     ```
 
 > [!CAUTION]
@@ -17,10 +21,10 @@ This repository contains the Compose configuration for deploying the BookStack W
 
 2. Launch the container(s) with the terminal.
 
-    ```
+    ```bash
     $ docker compose up
 
-    or
+    # or when using Podman:
 
     $ podman compose --file compose.yaml up 
     ```

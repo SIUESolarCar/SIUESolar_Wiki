@@ -1,40 +1,36 @@
 services:
-  bookstack:
-    image: lscr.io/linuxserver/bookstack
-    container_name: bookstack
+  mysql:
+    image: mysql:8.3
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=America/Chicago
-      - APP_URL=${APP_URL}
-      - DB_HOST=bookstack_db
-      - DB_PORT=3306
-      - DB_USER=${DB_USER}
-      - DB_PASS=${DB_PASS}
-      - DB_DATABASE=bookstackapp
+    - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASS}
+    - MYSQL_DATABASE=bookstack
+    - MYSQL_USER=bookstack
+    - MYSQL_PASSWORD=${DB_PASS}
     volumes:
-      - bookstack_app_data:/config
-    ports:
-      - ${PORT}:80
-    restart: unless-stopped
-    depends_on:
-      - bookstack_db
+    - mysql-data:/var/lib/mysql
 
-  bookstack_db:
-    image: lscr.io/linuxserver/mariadb
-    container_name: bookstack_db
+  bookstack:
+    image: solidnerd/bookstack:24.10.2
+    depends_on:
+    - mysql
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=America/Chicago
-      - MYSQL_ROOT_PASSWORD=${DB_PASS}
-      - MYSQL_DATABASE=bookstackapp
-      - MYSQL_USER=${DB_USER}
-      - MYSQL_PASSWORD=${DB_PASS}
+    - DB_HOST=mysql:3306
+    - DB_DATABASE=bookstack
+    - DB_USERNAME=bookstack
+    - DB_PASSWORD=${DB_PASS}
+    #set the APP_ to the URL of bookstack without without a trailing slash APP_URL=https://example.com
+    - APP_URL=${APP_URL}
+    # APP_KEY is used for encryption where needed, so needs to be persisted to
+    # preserve decryption abilities.
+    # Can run `php artisan key:generate` to generate a key
+    - APP_KEY=${APP_KEY}
     volumes:
-      - bookstack_db_data:/config
-    restart: unless-stopped
+    - uploads:/var/www/bookstack/public/uploads
+    - storage-uploads:/var/www/bookstack/storage/uploads
+    ports:
+    - ${PORT}:8080
 
 volumes:
-  bookstack_app_data:
-  bookstack_db_data:
+ mysql-data:
+ uploads:
+ storage-uploads:
