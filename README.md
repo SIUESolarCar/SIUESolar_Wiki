@@ -7,6 +7,7 @@ This repository contains the Compose configuration for deploying the BookStack W
 
     ```bash
     DB_PASS=secret
+    DB_ROOT_PASS=secret
     # Set the APP_URL to the URL of bookstack without without a trailing slash APP_URL=https://example.com
     APP_URL=https://bookstack.example.com
     PORT=6875
