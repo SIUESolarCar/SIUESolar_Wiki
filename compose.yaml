@@ -1,5 +1,6 @@
 services:
   mysql:
+    container_name: mysql
     image: mysql:8.3
     environment:
     - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASS}
@@ -10,6 +11,7 @@ services:
     - mysql-data:/var/lib/mysql
 
   bookstack:
+    container_name: bookstack
     image: solidnerd/bookstack:24.10.2
     depends_on:
     - mysql
