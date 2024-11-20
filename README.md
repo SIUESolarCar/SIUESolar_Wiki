@@ -3,7 +3,7 @@ This repository contains the Compose configuration for deploying the BookStack W
 
 # Setup
 
-1.  Create and Modify a `.env` with contents:
+1.  Create and modify a `.env` with contents:
 
     ```bash
     DB_PASS=secret
@@ -17,10 +17,39 @@ This repository contains the Compose configuration for deploying the BookStack W
     APP_KEY=SomeRandomStringWith32Characters
     ```
 
-> [!CAUTION]
-> Use secure passwords!! These services can be accessed on the open internet. Be Smart
+2.  Setup SMTP by creating and modifying a file `bookstack.env` with contents:
 
-2. Launch the container(s) with the terminal.
+    ```bash
+    MAIL_DRIVER=smtp
+
+    # SMTP server host address 
+    MAIL_HOST=smtp.provider.tld     # We use our Gmail for this
+
+    # SMTP server port
+    # Using port 465 will force connections to be via TLS
+    MAIL_PORT=587
+
+    # Connection encryption to use
+    # Valid values are: tls, null
+    # Using 'tls' will require either TLS or STARTTLS to be used.
+    # When using 'null' STARTTLS will still be attempted if announced
+    # as supported by your SMTP server.
+    # Using port 465 above will force connections to be via TLS.
+    MAIL_ENCRYPTION=tls
+
+    # Authentication details for your SMTP service
+    MAIL_USERNAME=user@provider.tld
+    MAIL_PASSWORD=onlyifneeded
+
+    # The "from" email address for outgoing email
+    MAIL_FROM=noreply@yourdomain.tld  
+
+    # The "from" name used for outgoing email
+    MAIL_FROM_NAME=BookStack
+    ```
+
+
+3. Launch the container(s) with the terminal.
 
     ```bash
     $ docker compose up
