@@ -24,7 +24,7 @@ jobs:
             mkdocs-excalidraw
             mkdocs-glightbox
 
-      - run: mkdocs gh-deploy --config-file example-mkdocs/mkdocs.yml --force
+      - run: mkdocs gh-deploy --force
  
   deploy_mkdocs:
     needs: build_mkdocs
