@@ -2,8 +2,11 @@ site_name: SIUE Solar Car Team Wiki
 repo_url: https://github.com/SIUESolarCar/SIUESolar_Wiki
 repo_name: SIUESolarCar/SIUESolar_Wiki
 plugins:
+  - search
   - excalidraw
   - glightbox
+markdown_extensions:
+  - admonition
 theme:
   name: material
   palette:
