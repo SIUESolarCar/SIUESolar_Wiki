@@ -1,0 +1,15 @@
+site_name: SIUE Solar Car Team Wiki
+repo_url: https://github.com/SIUESolarCar/SIUESolar_Wiki
+repo_name: SIUESolarCar/SIUESolar_Wiki
+theme:
+  name: material
+  palette:
+    primary: custom
+  logo: assets/logo.png
+  font:
+    text: Arimo Regular 400
+extra_css:
+  - stylesheets/extra.css
+extra:
+  generator: false
+copyright: Copyright &copy; 2026 SIUE Solar Car Team

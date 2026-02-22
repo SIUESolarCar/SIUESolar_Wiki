@@ -1,0 +1,9 @@
+// .devcontainer/devcontainer.json
+
+{
+	"name": "MkDocs Material editor",
+	"dockerFile": "Dockerfile",
+	"forwardPorts": [
+		8000
+	]
+}
