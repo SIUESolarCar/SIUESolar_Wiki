@@ -2,4 +2,10 @@
   --md-primary-fg-color:        #e5182d;
   --md-primary-fg-color--light: #e5182d;
   --md-primary-fg-color--dark:  #e5182d;
+  --md-text-link-color: #e5182d;
+  --md-text-link-color--dark: #e5182d;
+  --md-accent-fg-color: #e5182d;
+
+  /* --main-bg-color: #1b1b1b; */
+
 }
