@@ -1,3 +1,7 @@
+---
+title: System Overview
+---
+
 # Electrical System Overview
 
 A general guide to understanding how all of the car’s electrical systems work together.
@@ -26,7 +30,7 @@ The car’s electronics are organized into three main sections:
 ## Electrical System Overview
 
 
-![Electrical System](assets/drawings/ElectricalSystem.excalidraw)
+![Electrical System](../assets/drawings/ElectricalSystem.excalidraw)
 
 This diagram illustrates the major electrical components of the car and their key interconnections.  
 Data is transmitted across the vehicle primarily through the CAN Bus, which links the various control modules. In addition, some components communicate using low-voltage signals for simpler or direct connections.  
@@ -36,9 +40,9 @@ Both high-voltage and low-voltage power paths are also shown to highlight how en
 
 ## High Voltage (HV)
 
-### Battery box
+### Battery Box
 
-![Battery Box System](assets/drawings/BatteryPack.excalidraw#Overview)
+![Battery Box System](../assets/drawings/BatteryPack.excalidraw#Overview)
 
 The battery box is the heart of the car’s electrical system. It contains all of the battery cells, the battery management system, and the battery control module, which oversees all battery operations and communication.
 
@@ -48,13 +52,13 @@ Finally, the battery box serves as the source for the car’s low-voltage power,
 
 ### Battery Pack
 
-![Nova's Battery Pack](assets/images/NovaBatteryPack.png)
+![Nova's Battery Pack](../assets/images/NovaBatteryPack.png)
 
 This image shows an older battery pack from _Nova_, which was also used on _Orion_ in FSGP 2025. It consists of 420 cylindrical 18650 Li-ion cells arranged in a 30s14p configuration—meaning each module contains 14 cells in parallel, and there are 30 modules connected in series.
 
 ### Battery Management System (BMS)
 
-![Battery Management System](assets/drawings/BatteryPack.excalidraw#BMS)
+![Battery Management System](../assets/drawings/BatteryPack.excalidraw#BMS)
 
 This diagram illustrates how the battery pack is monitored using a commercial off-the-shelf (COTS) Battery Management System.
 
@@ -62,7 +66,7 @@ The BMS interfaces directly with the Battery Pack Control Module, providing real
 
 ### Battery Control Module (BCM)
 
-![Battery Control Module](assets/drawings/BatteryPack.excalidraw#BatteryControlModule#Overview)
+![Battery Control Module](../assets/drawings/BatteryPack.excalidraw#BatteryControlModule#Overview)
 
 The Battery Control Module acts as the interface between the driver’s inputs and the Battery Management System, ensuring that contactors are opened and closed safely to manage high-voltage power.
 
@@ -75,7 +79,7 @@ Through these functions, the BCM ensures both safe operation of the battery pack
 
 ### Propulsion
 
-![Propulsion System](assets/drawings/Propulsion.excalidraw#Overview)
+![Propulsion System](../assets/drawings/Propulsion.excalidraw#Overview)
 
 The propulsion system is what drives the car forward. It consists of a motor controller that manages a brushless DC (BLDC) hub motor mounted in the rear wheel.
 
@@ -89,7 +93,7 @@ The system also supports regenerative braking, allowing the motor to act as a ge
 
 ### 12 Volt System
 
-![12 Volt System](assets/drawings/12VoltSystem.excalidraw#Overview)
+![12 Volt System](../assets/drawings/12VoltSystem.excalidraw#Overview)
 
 The 12-volt system provides low-voltage power for the car’s control electronics, safety systems, and auxiliary devices.
 
@@ -108,7 +112,7 @@ All sensor data, system statuses, and control signals travel over the CAN Bus, a
 
 ### Telemetry
 
-![Telemetry System](assets/drawings/Telemetry.excalidraw#Overview)
+![Telemetry System](../assets/drawings/Telemetry.excalidraw#Overview)
 
 The team’s telemetry system is designed as a flexible and modular data monitoring solution that can scale to the team’s needs. Data is stored in a time-series database and visualized using a database viewer for real-time and historical analysis.
 
@@ -126,7 +130,7 @@ Data is transmitted using an onboard LoRa radio, which communicates with the tra
 
 ### Array Layout
 
-![Orion's Array Layout](assets/images/OrionArrayLayout_withMPPTzones.png)
+![Orion's Array Layout](../assets/images/OrionArrayLayout_withMPPTzones.png)
 
 This image shows the solar array originally designed for _Orion_, featuring a total area of 4 square meters.
 
@@ -136,7 +140,7 @@ All solar panels are encapsulated in-house, to reduce the cost of the array.
 
 ### Maximum Power Point Tracker (MPPT)
 
-![Maximum Power Point Tracker](assets/drawings/SolarArray.excalidraw#Overview)
+![Maximum Power Point Tracker](../assets/drawings/SolarArray.excalidraw#Overview)
 
 This diagram shows a single maximum power point tracker section from the rear of the solar array, including its bypass diodes.
 

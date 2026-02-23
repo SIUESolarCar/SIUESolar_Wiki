@@ -9,6 +9,12 @@ markdown_extensions:
   - admonition
 theme:
   name: material
+  features:
+    - navigation.tabs
+    - navigation.path
+    - navigation.sections
+    - navigation.top
+    - navigation.expand
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
