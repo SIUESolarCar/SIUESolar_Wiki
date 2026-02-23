@@ -40,7 +40,9 @@ Both high-voltage and low-voltage power paths are also shown to highlight how en
 
 ## High Voltage (HV)
 
-### Battery Box
+### Battery
+
+#### Battery Box
 
 ![Battery Box System](../assets/drawings/BatteryPack.excalidraw#Overview)
 
@@ -50,13 +52,13 @@ To manage high-voltage power, the box includes multiple contactors that control 
 
 Finally, the battery box serves as the source for the car’s low-voltage power, supplying energy for control electronics, lighting, and other auxiliary systems.
 
-### Battery Pack
+#### Battery Pack
 
 ![Nova's Battery Pack](../assets/images/NovaBatteryPack.png)
 
 This image shows an older battery pack from _Nova_, which was also used on _Orion_ in FSGP 2025. It consists of 420 cylindrical 18650 Li-ion cells arranged in a 30s14p configuration—meaning each module contains 14 cells in parallel, and there are 30 modules connected in series.
 
-### Battery Management System (BMS)
+#### Battery Management System (BMS)
 
 ![Battery Management System](../assets/drawings/BatteryPack.excalidraw#BMS)
 
@@ -64,9 +66,9 @@ This diagram illustrates how the battery pack is monitored using a commercial of
 
 The BMS interfaces directly with the Battery Pack Control Module, providing real-time information on voltage, current, and temperature to ensure the safe operation of the battery pack.
 
-### Battery Control Module (BCM)
+#### Battery Control Module (BCM)
 
-![Battery Control Module](../assets/drawings/BatteryPack.excalidraw#BatteryControlModule#Overview)
+![Battery Control Module](../assets/drawings/BatteryPack.excalidraw#BatteryControlModule)
 
 The Battery Control Module acts as the interface between the driver’s inputs and the Battery Management System, ensuring that contactors are opened and closed safely to manage high-voltage power.
 

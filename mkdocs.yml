@@ -13,6 +13,7 @@ theme:
     - navigation.tabs
     - navigation.path
     - navigation.sections
+    - navigation.indexes
     - navigation.top
     - navigation.expand
   palette:
