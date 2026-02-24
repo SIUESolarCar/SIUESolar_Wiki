@@ -23,6 +23,7 @@ jobs:
             mkdocs-material
             mkdocs-excalidraw
             mkdocs-glightbox
+            mkdocs-awesome-pages-plugin
 
       - run: mkdocs gh-deploy --force
  

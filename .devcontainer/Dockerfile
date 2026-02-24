@@ -5,3 +5,4 @@ FROM squidfunk/mkdocs-material:9
 
 RUN pip install mkdocs-glightbox
 RUN pip install mkdocs-excalidraw
+RUN pip install mkdocs-awesome-pages-plugin

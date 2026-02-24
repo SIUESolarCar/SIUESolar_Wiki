@@ -4,6 +4,7 @@ repo_name: SIUESolarCar/SIUESolar_Wiki
 plugins:
   - search
   - excalidraw
+  - awesome-pages
   - glightbox
 markdown_extensions:
   - admonition
