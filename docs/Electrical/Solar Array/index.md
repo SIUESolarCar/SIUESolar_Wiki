@@ -4,4 +4,4 @@ title: General
 
 # Solar Array
 
-Sill under work...
+Coming soon
