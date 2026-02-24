@@ -7,7 +7,7 @@
       
       
       
-        <link rel="next" href="Composites/">
+        <link rel="next" href="Mechanical/">
       
       
         
@@ -207,6 +207,7 @@
     <div class="md-container" data-md-component="container">
       
       
+  
         
           
             
@@ -243,13 +244,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="Composites/" class="md-tabs__link">
+        <a href="Mechanical/" class="md-tabs__link">
           
   
   
     
   
-  Composites
+  Mechanical
 
         </a>
       </li>
@@ -287,17 +288,36 @@
     
     
       <li class="md-tabs__item">
-        <a href="Mechanical/" class="md-tabs__link">
+        <a href="Composites/" class="md-tabs__link">
           
   
   
     
   
-  Mechanical
+  Composites
 
         </a>
       </li>
     
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="Contribute/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  How to Contribute
+
+      </a>
+    </li>
   
 
       
@@ -307,6 +327,228 @@
           
         
       
+          
+    <style>
+      :root {
+        --siue-red: #e5182d;
+        --text-main: #1a1a1a;
+        --text-muted: #555555;
+        --bg-light: #ffffff;
+        --card-bg: #ffffff;
+        --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        --note-bg: rgba(229, 24, 45, 0.164);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 16px;
+      }
+
+      h1 span {
+        color: var(--siue-red);
+      }
+
+      .vspacer {
+        height: 40px;
+      }
+
+      .subtitle {
+        font-size: 1.25rem;
+        color: var(--text-muted);
+        max-width: 600px;
+      }
+
+      .wiki-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-bottom: 60px;
+      }
+
+      .wiki-card {
+        /* background: var(--card-bg); */
+        border: 1px solid #eee;
+        border-radius: 12px;
+        padding: 32px;
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.2s ease, box-shadow 0.2s ease,
+          border-color 0.2s ease;
+      }
+
+      .wiki-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--card-shadow);
+        border-color: var(--siue-red);
+      }
+
+      .icon {
+        width: 48px;
+        height: 48px;
+        background: var(--note-bg);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        color: var(--siue-red);
+        font-size: 24px;
+      }
+
+      .wiki-card h2 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+      }
+
+      .wiki-card p {
+        /* color: var(--text-muted); */
+        font-size: 1rem;
+      }
+
+      .invitation-note {
+        background-color: var(--note-bg);
+        border: 1px solid rgba(229, 24, 45, 0.1);
+        border-radius: 16px;
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+      }
+
+      .note-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      .note-content p {
+        color: var(--text-muted);
+      }
+
+      .cta-button {
+        background-color: var(--siue-red);
+        color: white;
+        padding: 14px 28px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        white-space: nowrap;
+        transition: opacity 0.2s ease;
+      }
+
+      .cta-button:hover {
+        opacity: 0.9;
+      }
+
+      /* Mobile responsiveness */
+      @media (max-width: 900px) {
+        .wiki-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 2.2rem;
+        }
+
+        .wiki-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .invitation-note {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+
+    
+    
+      <div class="container">
+
+        <header>
+          <div class="vspacer"></div>
+          <h1>SIUE Solar Car Team <span>Wiki</span></h1>
+          <p class="subtitle">
+            A comprehensive technical guide to our solar racing journey,
+            engineering designs, and team operations.
+          </p>
+        </header>
+
+        <div class="vspacer"></div>
+
+        <main class="wiki-grid">
+          <a href="Mechanical/" class="wiki-card">
+            <div class="icon">⚙️</div>
+            <h2>Mechanical</h2>
+            <p>
+              Chassis, suspension, and braking systems documentation for
+              performance and safety.
+            </p>
+          </a>
+
+          <a href="Electrical/" class="wiki-card">
+            <div class="icon">⚡</div>
+            <h2>Electrical</h2>
+            <p>
+              Battery management, solar array optimization, and real-time
+              telemetry systems.
+            </p>
+          </a>
+
+          <a href="Composites/" class="wiki-card">
+            <div class="icon">🛠️</div>
+            <h2>Composites</h2>
+            <p>
+              Carbon fiber layup processes, mold fabrication, and structural
+              shell design.
+            </p>
+          </a>
+
+          <a href="Strategy/" class="wiki-card">
+            <div class="icon">📈</div>
+            <h2>Strategy</h2>
+            <p>
+              Race simulation models, weather tracking, and energy
+              management tactics.
+            </p>
+          </a>
+
+          <a href="Logistics/" class="wiki-card">
+            <div class="icon">🚛</div>
+            <h2>Logistics</h2>
+            <p>
+              Sponsorship acquisition, outreach programs, and event planning
+              resources.
+            </p>
+          </a>
+          <div class="vspacer"></div>
+          <div class="vspacer"></div>
+          <div class="vspacer"></div>
+          <div class="vspacer"></div>
+          <div class="vspacer"></div>
+          <div class="vspacer"></div>
+          <div class="vspacer"></div>
+          <div class="vspacer"></div>
+          <div class="vspacer"></div>
+          <div class="vspacer"></div>
+        </main>
+      </div>
+    
+
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
@@ -412,14 +654,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="Composites/" class="md-nav__link ">
+            <a href="Mechanical/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    Composites
+    Mechanical
   
 
     
@@ -436,7 +678,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Composites
+    Mechanical
   
 
           </label>
@@ -811,14 +1053,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="Mechanical/" class="md-nav__link ">
+            <a href="Composites/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    Mechanical
+    Composites
   
 
     
@@ -835,7 +1077,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Mechanical
+    Composites
   
 
           </label>
@@ -846,6 +1088,33 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Contribute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to Contribute
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -887,32 +1156,6 @@
               
               <article class="md-content__inner md-typeset">
                 
-                  
-
-
-  
-  
-
-
-  <h1>Home</h1>
-
-<p>Welcome to the SIUE Solar Car Teams Documentation</p>
-
-
-
-
-
-
-
-  
-  
-
-
-
-
-
-
-                
               </article>
             </div>
           
@@ -927,23 +1170,6 @@
 </button>
         
       </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-    <div class="md-copyright__highlight">
-      Copyright © 2026 SIUE Solar Car Team
-    </div>
-  
-  
-</div>
-      
-    </div>
-  </div>
-</footer>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
